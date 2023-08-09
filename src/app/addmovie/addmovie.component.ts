@@ -62,53 +62,6 @@ import { Component, EventEmitter, OnInit, Output } from "@angular/core";
         margin: 3px 7px;
         flex: 1 40%;
       }
-      .modal {
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        z-index: 1000;
-        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-      }
-      .modal-backdrop {
-        opacity: 0.5;
-        width: inherit;
-        height: inherit;
-        background-color: grey;
-        position: fixed;
-      }
-      .modal-body {
-        padding: 5px;
-        padding-top: 15px;
-        padding-bottom: 15px;
-      }
-      .modal-footer {
-        padding: 15px 5px;
-        display: flex;
-        justify-content: space-between;
-      }
-      .modal-header {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-      }
-      .modal-header h3 {
-        margin: 0;
-      }
-      .modal-content {
-        background-color: white;
-        z-index: 1;
-        padding: 10px;
-        margin-top: 10px;
-        width: 520px;
-        box-shadow: 0px 11px 15px -7px rgba(0, 0, 0, 0.2), 0px 24px 38px 3px rgba(0, 0, 0, 0.14),
-          0px 9px 46px 8px rgba(0, 0, 0, 0.12);
-        border-radius: 4px;
-      }
     `,
   ],
 })
