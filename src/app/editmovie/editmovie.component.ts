@@ -16,7 +16,7 @@ import { Component, EventEmitter, Input, OnInit, Output } from "@angular/core";
           <div class="inputField">
             <div class="label"><label>Name</label></div>
             <div>
-              <input id="addMovieName" type="text" value="{{ movie?.name }}" />
+              <input id="addMovieName" type="text" value="{{ movie?.attributes.name }}" />
             </div>
           </div>
           <div class="inputField">
@@ -25,24 +25,20 @@ import { Component, EventEmitter, Input, OnInit, Output } from "@angular/core";
               <input
                 id="addMovieImageUrl"
                 type="text"
-                value="{{ movie?.imageUrl }}"
+                value="{{ movie?.attributes.imageUrl }}"
               />
             </div>
           </div>
-          <div class="inputField">
+          <div style="width: 100%;">
             <div class="label"><label>Synopsis</label></div>
             <div>
-              <input
-                id="addMovieSynopsis"
-                type="text"
-                value="{{ movie?.synopsis }}"
-              />
+              <textarea id="addMovieSynopsis" name="addMovieSynopsis" rows="6" cols="50" value="{{ movie?.attributes.synopsis }}"></textarea>
             </div>
           </div>
           <div class="inputField">
             <div class="label"><label>Year</label></div>
             <div>
-              <input id="addMovieYear" type="text" value="{{ movie?.year }}" />
+              <input id="addMovieYear" type="text" value="{{ movie?.attributes.year }}" />
             </div>
           </div>
           <div class="inputField">
@@ -51,7 +47,7 @@ import { Component, EventEmitter, Input, OnInit, Output } from "@angular/core";
               <input
                 id="addMovieGenre"
                 type="text"
-                value="{{ movie?.genre }}"
+                value="{{ movie?.attributes.genre }}"
               />
             </div>
           </div>
@@ -83,6 +79,18 @@ import { Component, EventEmitter, Input, OnInit, Output } from "@angular/core";
       .inputField {
         margin: 3px 7px;
         flex: 1 40%;
+      }
+      textarea {
+        width: 100%;
+        padding: 9px;
+        font-weight: 400;
+        cursor: text;
+        outline: 0px;
+        border: 1px solid rgb(227, 233, 243);
+        border-radius: 2px;
+        color: rgb(51, 55, 64);
+        background-color: transparent;
+        box-sizing: border-box;
       }
     `,
   ],
